@@ -110,6 +110,14 @@
         </pluginRepository>
     </pluginRepositories>
 
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>maven-releases</name>
+            <url>http://22.144.101.75:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
+
 </project>
 
 

@@ -95,9 +95,9 @@ activitiApp.config(['$provide', '$routeProvider', '$translateProvider', function
           suffix: '.json'
         });
 
-        $translateProvider.registerAvailableLanguageKeys(['en'], {
+        $translateProvider.registerAvailableLanguageKeys(['en','zh_CN'], {
             'en_*': 'en',
-            'en-*': 'en'
+            'zh-*': 'zh_CN'
         });
 
   }])
@@ -179,13 +179,13 @@ activitiApp.config(['$provide', '$routeProvider', '$translateProvider', function
     .run(['$rootScope', '$timeout', '$translate', '$location', '$window', 'AuthenticationSharedService',
         function($rootScope, $timeout, $translate, $location, $window, AuthenticationSharedService) {
 
-            var proposedLanguage = $translate.proposedLanguage();
+            /*var proposedLanguage = $translate.proposedLanguage();
             if (proposedLanguage !== 'de' && proposedLanguage !== 'en' && proposedLanguage !== 'es' && proposedLanguage !== 'fr'
                 && proposedLanguage !== 'it' && proposedLanguage !== 'ja') {
-                
-                $translate.use('en');
-            }
-            
+            }*/
+            $translate.use('zh_CN');
+
+
             // Common model (eg selected tenant id)
             $rootScope.common = {};
 

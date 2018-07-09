@@ -213,9 +213,9 @@ activitiModeler
             suffix: '.json'
         });
 
-        $translateProvider.registerAvailableLanguageKeys(['en'], {
+        $translateProvider.registerAvailableLanguageKeys(['en','zh_CN'], {
             'en_*': 'en',
-            'en-*': 'en'
+            'zh-*': 'zh_CN'
         });
         
   }])
@@ -389,12 +389,11 @@ activitiModeler
   .run(['$rootScope', '$location', 'AuthenticationSharedService', 'Account', '$translate', '$window', '$modal',
         function($rootScope, $location, AuthenticationSharedService, Account, $translate, $window , $modal) {
       
-            var proposedLanguage = $translate.proposedLanguage();
+            /*var proposedLanguage = $translate.proposedLanguage();
             if (proposedLanguage !== 'de' && proposedLanguage !== 'en' && proposedLanguage !== 'es' && proposedLanguage !== 'fr'
                 && proposedLanguage !== 'it' && proposedLanguage !== 'ja') {
-              
-                $translate.use('en');
-            }
+            }*/
+            $translate.use('zh_CN');
 
             var fixedUrlPart = '/editor/';
 

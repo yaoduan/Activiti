@@ -294,9 +294,9 @@ activitiAdminApp
 	                       $rootScope.authenticated = false;
 	                       $location.path('/login');
 	                   });
-	                   
+
 	               }
-	               
+
 	            });
 
 	            // Call when the user logs in
@@ -312,13 +312,13 @@ activitiAdminApp
 	                          // Show default page
 	                          $location.path('engine');
 	                        }
-	                        
+
 	                       }, function () {
 	                           $rootScope.authenticated = false;
 	                           $location.path('/login');
 	                       });
 	                }
-	                
+
 	            });
 
 	            // Call when the user logs out
@@ -341,7 +341,7 @@ activitiAdminApp
                 var supportedLanguages = ['en','de','es','fr','it','nl','ja'];
 
                 if (supportedLanguages.indexOf(proposedLanguage) === -1) {
-                    $translate.use('en');
+
                 }
 
         		$rootScope.serverLoaded = false;

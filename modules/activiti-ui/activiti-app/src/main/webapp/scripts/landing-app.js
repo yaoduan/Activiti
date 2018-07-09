@@ -96,9 +96,9 @@ activitiApp
             suffix: '.json'
         })
 
-        .registerAvailableLanguageKeys(['en'], {
-            'en_*': 'en',
-            'en-*': 'en'
+        .registerAvailableLanguageKeys(['en','zh_CN'], {
+            'en-*': 'en',
+            'zh-*': 'zh_CN'
         });
 
 
@@ -178,12 +178,14 @@ activitiApp
      .run(['$rootScope', '$location', '$window', 'AuthenticationSharedService', '$translate', '$modal',
         function($rootScope, $location, $window, AuthenticationSharedService, $translate, $modal) {
          
-        var proposedLanguage = $translate.proposedLanguage();
+        /*var proposedLanguage = $translate.proposedLanguage();
+        console.log(proposedLanguage);
         if (proposedLanguage !== 'de' && proposedLanguage !== 'en' && proposedLanguage !== 'es' && proposedLanguage !== 'fr'
             && proposedLanguage !== 'it' && proposedLanguage !== 'ja') {
             
-            $translate.use('en');
-        }
+
+        }*/
+        $translate.use('zh_CN');
          
         /* Auto-height */
 
